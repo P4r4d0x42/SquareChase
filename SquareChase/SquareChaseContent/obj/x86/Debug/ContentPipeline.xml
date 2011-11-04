@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\Content\Sprites\Square.xnb</Output>
-      <Time>2011-11-04T00:39:09.0581643-07:00</Time>
+      <Output>C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\Content\Sprites\Square.xnb</Output>
+      <Time>2011-11-04T00:39:09-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -16,10 +16,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChaseContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChaseContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChaseContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChaseContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -48,7 +48,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-10-12T20:34:36.0036803-07:00</Value>
+        <Value>2011-06-02T22:15:37.8045255-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

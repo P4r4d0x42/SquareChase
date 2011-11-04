@@ -5,3 +5,10 @@ C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development 
 C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\obj\x86\Debug\SquareChase.exe
 C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\obj\x86\Debug\SquareChase.pdb
 C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\Content\Sprites\Square.xnb
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\Content\Sprites\Square.xnb
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\SquareChase.exe
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\bin\x86\Debug\SquareChase.pdb
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\obj\x86\Debug\SquareChase.exe
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChase\obj\x86\Debug\SquareChase.pdb

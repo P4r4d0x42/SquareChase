@@ -37,8 +37,8 @@ namespace SquareChase
 
 
         KeyboardState keys;
-        GamePadState pad1; 
-        
+        GamePadState pad1;
+        MouseState mouse;
 
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace SquareChase
                 timeRemaining = TimePerSquare;
             }
 
-            MouseState mouse = Mouse.GetState();
+            mouse = Mouse.GetState();
 
             if ((mouse.LeftButton == ButtonState.Pressed) &&
                 (currentSquare.Contains(mouse.X, mouse.Y)))
@@ -133,9 +133,14 @@ namespace SquareChase
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Gray);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(
+                squareTexture,
+                currentSquare,
+                colors[playerScore % 3]);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

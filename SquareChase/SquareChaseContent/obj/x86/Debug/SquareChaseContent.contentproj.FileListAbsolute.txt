@@ -1,1 +1,2 @@
 C:\Users\v-brain\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChaseContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\XNA 4.0 Game Development by Example\SquareChase\SquareChase\SquareChaseContent\obj\x86\Debug\ResolveAssemblyReference.cache
