@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Diagnostics;
 
 namespace SquareChase
 {
@@ -34,7 +35,7 @@ namespace SquareChase
         int height = 25;
         int width = 25;
         float timeRemaining = 0.0f;
-        const float TimePerSquare = 0.75f;
+        float TimePerSquare = 2.00f;
         Color[] colors = new Color [3] { Color.Red, Color.Green, Color.Blue };
 
 
@@ -111,12 +112,15 @@ namespace SquareChase
             {
                 playerScore++;
                 timeRemaining = 0.0f;
+                // Makes it fast as the player catches it
+                TimePerSquare -= 0.05f;
                 // Add on that has a chance to shrink the cube when you catch it, then it esplodes it. 
                 int shrink = rand.Next(1, 10);
                 if (shrink == 3 && currentSquare.Height >= 10 && currentSquare.Width >= 10)
                 {
                     height -= shrink;
                     width -= shrink;
+                    
                 }
                 if (currentSquare.Height <= 10 && currentSquare.Width <= 10)
                 {
@@ -136,7 +140,10 @@ namespace SquareChase
                  height--;
                  width--;
             }
-
+            if (TimePerSquare <= .25f)
+            {
+                TimePerSquare = 2.00f;
+            }
 
 
             timeRemaining = MathHelper.Max(0, timeRemaining -
@@ -146,13 +153,7 @@ namespace SquareChase
 
 
 
-
-
-
-
-
-
-
+            Console.WriteLine("TimePerSquare: " + TimePerSquare);
             base.Update(gameTime);
         }
 
