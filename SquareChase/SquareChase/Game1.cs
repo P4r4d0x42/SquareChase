@@ -18,12 +18,28 @@ namespace SquareChase
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        
+        
+        // Constructor
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
+
+        Random rand = new Random();
+        Texture2D squareTexture;
+        Rectangle currentSquare;
+        int playerScore = 0;
+        float timeRemaining = 0.0f;
+        const float TimePerSquare = 0.75f;
+        Color[] colors = new Color [3] { Color.Red, Color.Green, Color.Blue };
+
+
+        KeyboardState keys;
+        GamePadState pad1; 
+        
+
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -33,7 +49,8 @@ namespace SquareChase
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            // Shows the mouse
+            this.IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -47,7 +64,8 @@ namespace SquareChase
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            squareTexture = Content.Load<Texture2D>("Sprites/Square");
+
         }
 
         /// <summary>
@@ -66,11 +84,45 @@ namespace SquareChase
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            // Custom
+            keys = Keyboard.GetState();
+            pad1 = GamePad.GetState(PlayerIndex.One);
+
             // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            if (pad1.Buttons.Back == ButtonState.Pressed || keys.IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            // TODO: Add your update logic here
+
+            if (timeRemaining == 0.0f)
+            {
+                currentSquare = new Rectangle(
+                    rand.Next(0, this.Window.ClientBounds.Width - 25),
+                    rand.Next(0, this.Window.ClientBounds.Height - 25),
+                    25, 25);
+                timeRemaining = TimePerSquare;
+            }
+
+            MouseState mouse = Mouse.GetState();
+
+            if ((mouse.LeftButton == ButtonState.Pressed) &&
+                (currentSquare.Contains(mouse.X, mouse.Y)))
+            {
+                playerScore++;
+                timeRemaining = 0.0f;
+            }
+            timeRemaining = MathHelper.Max(0, timeRemaining -
+                (float)gameTime.ElapsedGameTime.TotalSeconds);
+            this.Window.Title = "Score : " + playerScore.ToString();
+
+
+
+
+
+
+
+
+
+
 
             base.Update(gameTime);
         }
