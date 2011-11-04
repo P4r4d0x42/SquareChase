@@ -31,6 +31,8 @@ namespace SquareChase
         Texture2D squareTexture;
         Rectangle currentSquare;
         int playerScore = 0;
+        int height = 25;
+        int width = 25;
         float timeRemaining = 0.0f;
         const float TimePerSquare = 0.75f;
         Color[] colors = new Color [3] { Color.Red, Color.Green, Color.Blue };
@@ -96,10 +98,10 @@ namespace SquareChase
             if (timeRemaining == 0.0f)
             {
                 currentSquare = new Rectangle(
-                    rand.Next(0, this.Window.ClientBounds.Width - 25),
-                    rand.Next(0, this.Window.ClientBounds.Height - 25),
-                    25, 25);
-                timeRemaining = TimePerSquare;
+                    rand.Next(0, this.Window.ClientBounds.Width - (height / 2)),
+                    rand.Next(0, this.Window.ClientBounds.Height - (width / 2)),
+                    width, height);
+                 timeRemaining = TimePerSquare;
             }
 
             mouse = Mouse.GetState();
@@ -109,7 +111,34 @@ namespace SquareChase
             {
                 playerScore++;
                 timeRemaining = 0.0f;
+                // Add on that has a chance to shrink the cube when you catch it, then it esplodes it. 
+                int shrink = rand.Next(1, 10);
+                if (shrink == 3 && currentSquare.Height >= 10 && currentSquare.Width >= 10)
+                {
+                    height -= shrink;
+                    width -= shrink;
+                }
+                if (currentSquare.Height <= 10 && currentSquare.Width <= 10)
+                {
+                    int temp = rand.Next(200, 480);
+                    height = temp;
+                    width = temp;
+                    playerScore += 100;
+                }
             }
+            // Shrinks cube back down
+            if (currentSquare.Height > 25 && currentSquare.Width > 25)
+            {
+                // Provides zoom effect
+                currentSquare.Height--;
+                currentSquare.Width--;
+                //TODO: Fix this Work around
+                 height--;
+                 width--;
+            }
+
+
+
             timeRemaining = MathHelper.Max(0, timeRemaining -
                 (float)gameTime.ElapsedGameTime.TotalSeconds);
             this.Window.Title = "Score : " + playerScore.ToString();
